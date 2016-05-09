@@ -16,6 +16,7 @@ public class MainBoard {
 	private ArrayList<Player> players= new ArrayList<Player>();
 	int xsize;
 	int ysize;
+	boolean addon;
 	int turn=0;
 	
 	
@@ -33,6 +34,12 @@ public class MainBoard {
 		xsize = x;
 		ysize = y;
 	}
+	public void addSpace(){
+		xsize ++;
+
+		spaces.add(new BoardSpace(xsize,ysize,this));
+
+	}
 	public ArrayList<Player> getPlayers(){
 		return players;
 	}
@@ -47,8 +54,7 @@ public class MainBoard {
 		{
 			for(int j =0; j < y;j++)
 			{
-				BoardSpace s = new BoardSpace(i,j,this);
-				spaces.add(s);
+				spaces.add(new BoardSpace(i,j,this));
 			}
 		}
 	}
@@ -88,5 +94,14 @@ public class MainBoard {
 		p.setSpaceon(s);
 		players.add(p);
 		}
+	}
+	public boolean addonspace(){
+		return addon;
+	}
+	public void addedspace(){
+		addon = false;
+	}
+	public void pleaseadd(){
+		addon = true;
 	}
 }

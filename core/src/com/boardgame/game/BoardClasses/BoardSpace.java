@@ -3,6 +3,7 @@ package com.boardgame.game.BoardClasses;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.boardgame.game.gamepack.Trap;
+import com.boardgame.game.sprites.SingleTile;
 import com.boardgame.game.sprites.Tile;
 
 /**
@@ -13,7 +14,7 @@ import com.boardgame.game.sprites.Tile;
 public class BoardSpace {
 
 	//for textures
-	private Tile tile;
+	private SingleTile tile;
 
 	//objects on space
 	private Trap storedTrap;
@@ -29,7 +30,7 @@ public class BoardSpace {
 		this.setX(x);
 		this.setY(y);
 		board = mainBoard;
-		tile = new Tile(0);
+		tile = new SingleTile(0);
 	}
 
 	//constructor for when specifying a type of panel to create
@@ -37,7 +38,7 @@ public class BoardSpace {
 		this.setX(x);
 		this.setY(y);
 		board = mainBoard;
-		tile = new Tile(type);
+		tile = new SingleTile(type);
 	}
 
 	//used for placing objects on the space
@@ -93,10 +94,10 @@ public class BoardSpace {
 		//s.addTrap(storedTrap);
 		return s;
 	}
-	public Tile getTile(){
+	public SingleTile getTile(){
 		return tile;
 	}
-	public TextureRegion getTextures(){
+	public Texture getTextures(){
 		return tile.getTile();
 	}
 

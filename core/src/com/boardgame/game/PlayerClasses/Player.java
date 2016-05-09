@@ -1,5 +1,6 @@
 package com.boardgame.game.PlayerClasses;
 
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.boardgame.game.BoardClasses.BoardObject;
 import com.boardgame.game.gamepack.Card;
 import com.boardgame.game.gamepack.Skill;
@@ -8,6 +9,8 @@ import com.boardgame.game.gamepack.SkillList;
 import java.util.ArrayList;
 
 public class Player extends BoardObject {
+
+	private TextureRegion player;
 
 	private ArrayList<Card> hand= new ArrayList<Card>();
 	private SkillList skills;

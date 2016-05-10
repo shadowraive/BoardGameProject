@@ -1,6 +1,8 @@
 *.class
 desktop/*
+/.gradle/*
 .gradle/*
+/.settings/*
 .settings/*
 desktop/.project
 android/.classpath

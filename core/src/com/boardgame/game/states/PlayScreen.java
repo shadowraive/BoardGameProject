@@ -25,9 +25,9 @@ public class PlayScreen extends State {
     public PlayScreen(GameStateManager gsm){
         super(gsm);
         bs = new ArrayList<BoardSpace>();
-        mb = new MainBoard(100, 100);
-        cam.setToOrtho(false, MyGdxGame.WIDTH*2, MyGdxGame.HEIGHT*2);
-        boardOffsetX = 100;
+        mb = new MainBoard(10, 10);
+        cam.setToOrtho(false, MyGdxGame.WIDTH*2-150, MyGdxGame.HEIGHT*2-150);
+        boardOffsetX = 40;
         boardOffsetY = 700;
     }
     @Override

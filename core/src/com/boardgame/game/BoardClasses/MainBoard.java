@@ -35,7 +35,7 @@ public class MainBoard {
 		ysize = y;
 	}
 	public void addSpace(){
-		xsize ++;
+//		xsize ++;
 
 		spaces.add(new BoardSpace(xsize,ysize,this));
 
@@ -49,6 +49,8 @@ public class MainBoard {
 	public int getYSize(){
 		return ysize;
 	}
+
+
 	public void makeBoard(int x, int y){
 		for(int i =0; i < x;i++)
 		{
